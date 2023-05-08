@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="BuildingInfo" table="BuildingInfo">
+
+          <!-- 主键楼盘编号 -->
+          <id name="buildingId" column="buildingId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 所在区域 -->
+          <many-to-one name="areaObj"
+            column="areaObj"
+            class="AreaInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 楼盘名称 -->
+          <property
+            name="buildingName"
+            column="buildingName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单图片属性: 楼盘图片 -->
+          <property
+            name="buildingPhoto"
+            column="buildingPhoto"
+            type="string"
+            length="50"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

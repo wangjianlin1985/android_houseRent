@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Hourse" table="Hourse">
+
+          <!-- 主键房屋编号 -->
+          <id name="hourseId" column="hourseId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 房屋名称 -->
+          <property
+            name="hourseName"
+            column="hourseName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 所在楼盘 -->
+          <many-to-one name="buildingObj"
+            column="buildingObj"
+            class="BuildingInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单图片属性: 房屋图片 -->
+          <property
+            name="housePhoto"
+            column="housePhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 多对一属性: 房屋类型 -->
+          <many-to-one name="hourseTypeObj"
+            column="hourseTypeObj"
+            class="HourseType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 价格范围 -->
+          <many-to-one name="priceRangeObj"
+            column="priceRangeObj"
+            class="PriceRange"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 面积 -->
+          <property
+            name="area"
+            column="area"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单浮点型属性: 租金(元/月) -->
+          <property
+            name="price"
+            column="price"
+            type="float"
+          />
+
+          <!-- 简单字符串属性: 楼层/总楼层 -->
+          <property
+            name="louceng"
+            column="louceng"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 装修 -->
+          <property
+            name="zhuangxiu"
+            column="zhuangxiu"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 朝向 -->
+          <property
+            name="caoxiang"
+            column="caoxiang"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 建筑年代 -->
+          <property
+            name="madeYear"
+            column="madeYear"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系人 -->
+          <property
+            name="connectPerson"
+            column="connectPerson"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="connectPhone"
+            column="connectPhone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 详细信息 -->
+          <property
+            name="detail"
+            column="detail"
+            type="string"
+            length="500"
+          />
+
+          <!-- 简单字符串属性: 地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="50"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

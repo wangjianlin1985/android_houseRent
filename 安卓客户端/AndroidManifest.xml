@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="AreaInfoListActivity"></activity>
+        <activity android:name="AreaInfoQueryActivity"></activity>
+        <activity android:name="AreaInfoAddActivity"></activity>
+        <activity android:name="AreaInfoEditActivity"></activity>
+        <activity android:name="AreaInfoDetailActivity"></activity>
+        <activity android:name="BuildingInfoListActivity"></activity>
+        <activity android:name="BuildingInfoQueryActivity"></activity>
+        <activity android:name="BuildingInfoAddActivity"></activity>
+        <activity android:name="BuildingInfoEditActivity"></activity>
+        <activity android:name="BuildingInfoDetailActivity"></activity>
+        <activity android:name="HourseListActivity"></activity>
+        <activity android:name="HourseQueryActivity"></activity>
+        <activity android:name="HourseAddActivity"></activity>
+        <activity android:name="HourseEditActivity"></activity>
+        <activity android:name="HourseDetailActivity"></activity>
+        <activity android:name="HourseTypeListActivity"></activity>
+        <activity android:name="HourseTypeQueryActivity"></activity>
+        <activity android:name="HourseTypeAddActivity"></activity>
+        <activity android:name="HourseTypeEditActivity"></activity>
+        <activity android:name="HourseTypeDetailActivity"></activity>
+        <activity android:name="PriceRangeListActivity"></activity>
+        <activity android:name="PriceRangeQueryActivity"></activity>
+        <activity android:name="PriceRangeAddActivity"></activity>
+        <activity android:name="PriceRangeEditActivity"></activity>
+        <activity android:name="PriceRangeDetailActivity"></activity>
+        <activity android:name="WantHourseInfoListActivity"></activity>
+        <activity android:name="WantHourseInfoQueryActivity"></activity>
+        <activity android:name="WantHourseInfoAddActivity"></activity>
+        <activity android:name="WantHourseInfoEditActivity"></activity>
+        <activity android:name="WantHourseInfoDetailActivity"></activity>
+        <activity android:name="GuestBookListActivity"></activity>
+        <activity android:name="GuestBookQueryActivity"></activity>
+        <activity android:name="GuestBookAddActivity"></activity>
+        <activity android:name="GuestBookEditActivity"></activity>
+        <activity android:name="GuestBookDetailActivity"></activity>
+        <activity android:name="NewsInfoListActivity"></activity>
+        <activity android:name="NewsInfoQueryActivity"></activity>
+        <activity android:name="NewsInfoAddActivity"></activity>
+        <activity android:name="NewsInfoEditActivity"></activity>
+        <activity android:name="NewsInfoDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

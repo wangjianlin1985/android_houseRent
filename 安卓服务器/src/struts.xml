@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- UserInfoAction配置 -->
+         <package name="UserInfo" namespace="/UserInfo" extends="struts-default">
+           <action name="UserInfo_*" class="userInfoAction" method="{1}">
+             <result name="add_view">/UserInfo_add.jsp</result>
+             <result name="input">/UserInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/UserInfo_query_result.jsp</result>
+             <result name="front_query_view">/UserInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/UserInfo_frontshow.jsp</result>
+             <result name="modify_view">/UserInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- AreaInfoAction配置 -->
+         <package name="AreaInfo" namespace="/AreaInfo" extends="struts-default">
+           <action name="AreaInfo_*" class="areaInfoAction" method="{1}">
+             <result name="add_view">/AreaInfo_add.jsp</result>
+             <result name="input">/AreaInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/AreaInfo_query_result.jsp</result>
+             <result name="front_query_view">/AreaInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/AreaInfo_frontshow.jsp</result>
+             <result name="modify_view">/AreaInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- BuildingInfoAction配置 -->
+         <package name="BuildingInfo" namespace="/BuildingInfo" extends="struts-default">
+           <action name="BuildingInfo_*" class="buildingInfoAction" method="{1}">
+             <result name="add_view">/BuildingInfo_add.jsp</result>
+             <result name="input">/BuildingInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/BuildingInfo_query_result.jsp</result>
+             <result name="front_query_view">/BuildingInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/BuildingInfo_frontshow.jsp</result>
+             <result name="modify_view">/BuildingInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- HourseAction配置 -->
+         <package name="Hourse" namespace="/Hourse" extends="struts-default">
+           <action name="Hourse_*" class="hourseAction" method="{1}">
+             <result name="add_view">/Hourse_add.jsp</result>
+             <result name="input">/Hourse_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Hourse_query_result.jsp</result>
+             <result name="front_query_view">/Hourse_frontquery_result.jsp</result>
+             <result name="front_show_view">/Hourse_frontshow.jsp</result>
+             <result name="modify_view">/Hourse_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- HourseTypeAction配置 -->
+         <package name="HourseType" namespace="/HourseType" extends="struts-default">
+           <action name="HourseType_*" class="hourseTypeAction" method="{1}">
+             <result name="add_view">/HourseType_add.jsp</result>
+             <result name="input">/HourseType_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/HourseType_query_result.jsp</result>
+             <result name="front_query_view">/HourseType_frontquery_result.jsp</result>
+             <result name="front_show_view">/HourseType_frontshow.jsp</result>
+             <result name="modify_view">/HourseType_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- PriceRangeAction配置 -->
+         <package name="PriceRange" namespace="/PriceRange" extends="struts-default">
+           <action name="PriceRange_*" class="priceRangeAction" method="{1}">
+             <result name="add_view">/PriceRange_add.jsp</result>
+             <result name="input">/PriceRange_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/PriceRange_query_result.jsp</result>
+             <result name="front_query_view">/PriceRange_frontquery_result.jsp</result>
+             <result name="front_show_view">/PriceRange_frontshow.jsp</result>
+             <result name="modify_view">/PriceRange_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- WantHourseInfoAction配置 -->
+         <package name="WantHourseInfo" namespace="/WantHourseInfo" extends="struts-default">
+           <action name="WantHourseInfo_*" class="wantHourseInfoAction" method="{1}">
+             <result name="add_view">/WantHourseInfo_add.jsp</result>
+             <result name="input">/WantHourseInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/WantHourseInfo_query_result.jsp</result>
+             <result name="front_query_view">/WantHourseInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/WantHourseInfo_frontshow.jsp</result>
+             <result name="modify_view">/WantHourseInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- GuestBookAction配置 -->
+         <package name="GuestBook" namespace="/GuestBook" extends="struts-default">
+           <action name="GuestBook_*" class="guestBookAction" method="{1}">
+             <result name="add_view">/GuestBook_add.jsp</result>
+             <result name="input">/GuestBook_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/GuestBook_query_result.jsp</result>
+             <result name="front_query_view">/GuestBook_frontquery_result.jsp</result>
+             <result name="front_show_view">/GuestBook_frontshow.jsp</result>
+             <result name="modify_view">/GuestBook_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- NewsInfoAction配置 -->
+         <package name="NewsInfo" namespace="/NewsInfo" extends="struts-default">
+           <action name="NewsInfo_*" class="newsInfoAction" method="{1}">
+             <result name="add_view">/NewsInfo_add.jsp</result>
+             <result name="input">/NewsInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/NewsInfo_query_result.jsp</result>
+             <result name="front_query_view">/NewsInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/NewsInfo_frontshow.jsp</result>
+             <result name="modify_view">/NewsInfo_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>

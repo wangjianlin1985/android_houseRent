@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="GuestBook" table="GuestBook">
+
+          <!-- 主键记录编号 -->
+          <id name="guestBookId" column="guestBookId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 留言标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="40"
+          />
+
+          <!-- 简单字符串属性: 留言内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="200"
+          />
+
+          <!-- 多对一属性: 留言人 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 留言时间 -->
+          <property
+            name="addTime"
+            column="addTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

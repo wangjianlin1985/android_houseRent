@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="WantHourseInfo" table="WantHourseInfo">
+
+          <!-- 主键记录编号 -->
+          <id name="wantHourseId" column="wantHourseId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 求租用户 -->
+          <many-to-one name="userObj"
+            column="userObj"
+            class="UserInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 标题 -->
+          <property
+            name="title"
+            column="title"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 求租区域 -->
+          <many-to-one name="position"
+            column="position"
+            class="AreaInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 房屋类型 -->
+          <many-to-one name="hourseTypeObj"
+            column="hourseTypeObj"
+            class="HourseType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 价格范围 -->
+          <many-to-one name="priceRangeObj"
+            column="priceRangeObj"
+            class="PriceRange"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单浮点型属性: 最高能出租金 -->
+          <property
+            name="price"
+            column="price"
+            type="float"
+          />
+
+          <!-- 简单字符串属性: 联系人 -->
+          <property
+            name="lianxiren"
+            column="lianxiren"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
